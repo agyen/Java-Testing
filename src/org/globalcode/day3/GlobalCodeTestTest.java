@@ -1,17 +1,23 @@
 package org.globalcode.day3;
 
-import org.junit.After;
-import org.junit.Before;
+import org.globalcode.day3.models.Deck;
+import org.junit.Test;
 
-class GlobalCodeTestTest {
+import static junit.framework.TestCase.assertEquals;
 
-    @Before
-    void setUp() {
+public class GlobalCodeTestTest {
 
+    @Test
+    public void isCardDeck52Cards(){
+        Deck.setUp();
+        assertEquals("Card Deck Number Check", 52, Deck.cards.size());
     }
 
-
-    @After
-    void tearDown() {
+    @Test
+    public void isShuffledCard52(){
+        Deck.setUp();
+        Deck.shuffle();
+        assertEquals("Shuffled Deck Card Number Check", 52, Deck.cards.size());
     }
+
 }

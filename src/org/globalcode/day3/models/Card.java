@@ -3,9 +3,13 @@ package org.globalcode.day3.models;
 import java.util.Objects;
 
 public class Card {
-
-    private CardValue value;
     private Suit suit;
+    private CardValue value;
+
+    public Card(Suit suit, CardValue value) {
+        this.suit = suit;
+        this.value = value;
+    }
 
     public CardValue getValue() {
         return value;
@@ -41,8 +45,8 @@ public class Card {
     @Override
     public String toString() {
         return "Card{" +
-                "value=" + value.getValue() +
-                ", suit=" + suit.name() +
+                "suit=" + suit +
+                ", value=" + value +
                 '}';
     }
 }
